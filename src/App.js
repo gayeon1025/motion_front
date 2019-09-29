@@ -6,6 +6,7 @@ import Join from "./Pages/Join";
 import Notice from "./Pages/Notice";
 import Board from "./Pages/Board";
 import Schedule from "./Pages/Schedule";
+import Education from "./Pages/Edu";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/notice" component={ Notice }/>
           <Route path="/board" component={ Board }/>
           <Route path="/calendar" component={ Schedule }/>
+          <Route path="/edu" component={ Education }/>
         </Router>
       </header>
     </div>

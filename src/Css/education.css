@@ -1,0 +1,37 @@
+.eduHeaderDiv {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+    padding: 150px 0;
+}
+.eduHeaderTitle {
+    font-weight: bold;
+    font-size: 70px;
+    width: 280px;
+    margin: auto auto;
+}
+.eduHeaderSubTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+.eduContentsDiv {
+    margin: 50px auto 0 auto;
+}
+.eduContentTitle {
+    color: rgb(151, 151, 151);
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-bottom: 2px solid rgb(130, 130, 130);
+    font-weight: bold;
+    font-size: 27px;
+}
+.eduContentComment {
+    color: rgb(180, 180, 180);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
