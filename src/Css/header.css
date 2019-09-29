@@ -5,9 +5,10 @@
   padding: 15px 20px;
   background: #FFFFFF;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.30);
-  position: static;
+  position: fixed;
   left: 0;
   top: 0;
+  z-index: 111;
 }
 #navigation{
   display: flex;
@@ -55,4 +56,11 @@
   padding: 10px 10px;
   border-radius: 10px;
   color: #FFFFFF;
+}
+.mainPhoto {
+  background-image: url("../Images/home_pattern.jpg");
+  background-repeat: no-repeat;
+  width: auto;
+  height: 550px;
+  overflow: hidden;
 }

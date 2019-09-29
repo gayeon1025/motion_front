@@ -1,18 +1,22 @@
+.homeDiv {
+    position: relative;
+}
 
 /*Main(Join) Section*/
-.mainContainer {
-    background-image: url("../Images/home_pattern.jpg");
-    background-repeat: no-repeat;
-    width: auto;
-    height: 550px;
-    position: relative;
+.mainDiv {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    left: 0;
+    top: -400px;
     overflow: hidden;
 }
 .mainTextContainer {
     position: absolute;
     left: 250px;
-    top: 130px;
+    top: 600px;
     text-align: center;
+    width: 700px;
 }
 .slogan {
     font-family: 'Roboto Condensed', sans-serif;
@@ -40,19 +44,14 @@
     width: 700px;
     position: absolute;
     left: 950px;
-    top: 100px;
+    top: 550px;
     animation-name: speed;
     animation-duration: 2s;
+    z-index: 11;
 }
 @keyframes speed {
     0% {transform: translateY(300px);}
     to {transform: translateY(0);}
-}
-#clouds {
-    fill: #fff;
-    stroke: #fff;
-    overflow: hidden;
-    margin-top: 450px;
 }
 
 /*IntroVideo Section*/

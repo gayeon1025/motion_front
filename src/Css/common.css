@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Sunflower:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100&display=swap');
 
 /*Common*/
 html, body {
@@ -30,4 +31,26 @@ ul {
 }
 hr {
     margin: 0 175px;
+}
+.clouds {
+    fill: #fff;
+    stroke: #fff;
+    overflow: hidden;
+    margin-top: 450px;
+}
+
+/*Fonts*/
+/*ko*/
+.notoSansFont {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.sunflowerFont {
+    font-family: 'Sunflower', sans-serif;
+}
+.dohyeonFont {
+    font-family: 'Do Hyeon', sans-serif;
+}
+/*en*/
+.robotoFont {
+    font-family: 'Roboto Condensed', sans-serif;
 }

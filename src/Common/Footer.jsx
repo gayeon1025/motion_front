@@ -11,7 +11,7 @@ class Footer extends Component {
         return (
             <div id={"footer"} >
                 <hr/>
-                published by 201502136 김가연
+                published by 201502136 김가연 ☺︎︎
             </div>
         )
     }
