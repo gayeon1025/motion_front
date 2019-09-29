@@ -1,3 +1,4 @@
+/*Header*/
 .boardHeaderDiv {
     width: 100%;
     height: 400px;
@@ -17,6 +18,8 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+/*Contents*/
 .boardContentsDiv {
     margin: 50px auto;
 }
@@ -28,4 +31,28 @@
     border-bottom: 2px solid rgb(130, 130, 130);
     font-weight: bold;
     font-size: 27px;
+}
+.boardContentComment {
+    color: rgb(180, 180, 180);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/*Table Layout*/
+.boardNo {
+    width: 100px;
+}
+.boardTitle {
+    width: 750px;
+}
+.boardTitle:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.boardAuthor {
+    width: 150px;
+}
+.boardDate {
+    width: 200px;
 }

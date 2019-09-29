@@ -31,7 +31,9 @@ class BoardContents extends Component {
     render() {
         return (
             <div className={"contents boardContentsDiv"}>
-                <div className={"boardContentTitle"}>게시</div>
+                <div className={"boardContentTitle"}>게시판</div>
+                <div className={"boardContentComment notoSansFont"}>건의사항, 교육문의 등 자유롭게 질문해 주세요 :-)</div>
+
                 <div className={"boardTableDiv"}>
                     <table className={"table"}>
                         <thead>

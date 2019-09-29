@@ -44,7 +44,7 @@ hr {
     border-collapse: collapse;
     border-top: 2px solid rgb(143, 148, 46);
     border-bottom: 2px solid rgb(143, 148, 46);
-    margin: 50px auto;
+    margin: 0 auto;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 18px;
     color: rgb(120, 120, 120);;
@@ -63,22 +63,6 @@ hr {
 }
 .table > tbody > tr > td {
     padding: 7px 0;
-}
-.noticeNo {
-    width: 100px;
-}
-.noticeTitle {
-    width: 750px;
-}
-.noticeTitle:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
-.noticeAuthor {
-    width: 150px;
-}
-.noticeDate {
-    width: 200px;
 }
 
 /*Fonts*/
