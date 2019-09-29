@@ -2,37 +2,37 @@ import React, { Component } from 'react'
 import Header from '../Common/Header'
 import Footer from "../Common/Footer"
 import '../Css/common.css'
-import '../Css/notice.css'
+import '../Css/board.css'
 import Pagination from "../Common/Pagination";
 
-class Notice extends Component {
+class Board extends Component {
     render() {
         return (
             <div className={"fullWidth"}>
                 <Header/>
-                    <NoticeHeader/>
-                    <NoticeContents/>
+                    <BoardHeader/>
+                    <BoardContents/>
                 <Footer/>
             </div>
         )
     }
 }
 
-const NoticeHeader = () => (
-    <div className={"fullWidth noticeHeaderDiv"}>
-        <div className={"noticeTextDiv"}>
-            <div className={"noticeHeaderTitle robotoFont"}> Notice </div>
-            <div className={"noticeHeaderSubTitle notoSansFont"}> 공지사항 </div>
+const BoardHeader = () => (
+    <div className={"fullWidth boardHeaderDiv"}>
+        <div className={"boardTextDiv"}>
+            <div className={"boardHeaderTitle robotoFont"}> Board </div>
+            <div className={"boardHeaderSubTitle notoSansFont"}> 게시판 </div>
         </div>
     </div>
 )
 
-class NoticeContents extends Component {
+class BoardContents extends Component {
     render() {
         return (
-            <div className={"contents noticeContentsDiv"}>
-                <div className={"noticeContentTitle"}>공지사항</div>
-                <div className={"noticeTableDiv"}>
+            <div className={"contents boardContentsDiv"}>
+                <div className={"boardContentTitle"}>게시</div>
+                <div className={"boardTableDiv"}>
                     <table className={"table"}>
                         <thead>
                         <tr>
@@ -45,14 +45,14 @@ class NoticeContents extends Component {
                         <tbody>
                         <tr>
                             <th className={"noticeNo"}>1</th>
-                            <td className={"noticeTitle"}>첫 공지입니다.</td>
+                            <td className={"noticeTitle"}>콜라톤관련 문의드립니다.</td>
                             <td className={"noticeAuthor"}>김가연</td>
                             <td className={"noticeDate"}>2019.09.29</td>
                         </tr>
                         <tr>
                             <th className={"noticeNo"}>2</th>
-                            <td className={"noticeTitle"}>콜라톤 관련 공지입니다.</td>
-                            <td className={"noticeAuthor"}>김가연</td>
+                            <td className={"noticeTitle"}>컴파일러 과제 아시는분 구합니다!!!</td>
+                            <td className={"noticeAuthor"}>이정준</td>
                             <td className={"noticeDate"}>2019.08.29</td>
                         </tr>
                         </tbody>
@@ -63,5 +63,4 @@ class NoticeContents extends Component {
         )
     }
 }
-
-export default Notice
+export default Board

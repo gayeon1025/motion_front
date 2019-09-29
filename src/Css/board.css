@@ -1,0 +1,31 @@
+.boardHeaderDiv {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+    padding: 150px 0;
+}
+.boardHeaderTitle {
+    font-weight: bold;
+    font-size: 70px;
+    width: 180px;
+    margin: auto auto;
+}
+.boardHeaderSubTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+.boardContentsDiv {
+    margin: 50px auto;
+}
+.boardContentTitle {
+    color: rgb(151, 151, 151);
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-bottom: 2px solid rgb(130, 130, 130);
+    font-weight: bold;
+    font-size: 27px;
+}

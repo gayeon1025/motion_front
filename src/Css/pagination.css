@@ -20,6 +20,7 @@
     background-color: #fff;
     border: 1px solid #dee2e6;
     font-weight: bold;
+    font-size: 20px;
 }
 .page-item:hover {
     cursor: pointer;

@@ -39,13 +39,13 @@ const MenuContainer = () => (
         <ul className="nav navbar-nav navbar-right menu-top">
             <li className = { "navMenu" }><a className="active menuText" href="/home">Home</a></li>
             <li className = { "navMenu" }><a className="menuText" href="/notice">공지사항 </a></li>
-            <li className = { "navMenu" }><a className="menuText" href="../../../../../../Downloads/flaxseo/services.html">게시판</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="../../../../../../Downloads/flaxseo/case-study.html">일정</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="../../../../../../Downloads/flaxseo/pricing.html">교육</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="../../../../../../Downloads/flaxseo/pricing.html">기출문제</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="../../../../../../Downloads/flaxseo/contact.html">물품대여</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="../../../../../../Downloads/flaxseo/contact.html">사진첩</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="../../../../../../Downloads/flaxseo/contact.html">로그인</a></li>
+            <li className = { "navMenu" }><a className="menuText" href="/board">게시판</a></li>
+            <li className = { "navMenu" }><a className="menuText" href="/calendar">일정</a></li>
+            <li className = { "navMenu" }><a className="menuText" href="/edu">교육</a></li>
+            <li className = { "navMenu" }><a className="menuText" href="/exam">기출문제</a></li>
+            <li className = { "navMenu" }><a className="menuText" href="/equipment">물품대여</a></li>
+            <li className = { "navMenu" }><a className="menuText" href="/gallery">사진첩</a></li>
+            <li className = { "navMenu" }><a className="menuText" href="/login">로그인</a></li>
         </ul>
     </div>
 )

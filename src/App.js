@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
-import Home from "./Pages/Home"
-import Join from "./Pages/Join"
-import Notice from "./Pages/Notice"
-
+import Home from "./Pages/Home";
+import Join from "./Pages/Join";
+import Notice from "./Pages/Notice";
+import Board from "./Pages/Board";
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
           <Route path="/home" component={ Home }/>
           <Route path="/join" component={ Join }/>
           <Route path="/notice" component={ Notice }/>
+            <Route path="/board" component={ Board }/>
         </Router>
       </header>
     </div>

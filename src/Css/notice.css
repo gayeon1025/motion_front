@@ -29,11 +29,11 @@
     font-weight: bold;
     font-size: 27px;
 }
-.noticeTableDiv > * {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 18px;
-    color: rgb(120, 120, 120);;
-}
+/*.noticeTableDiv > * {*/
+/*    font-family: 'Noto Sans KR', sans-serif;*/
+/*    font-size: 18px;*/
+/*    color: rgb(120, 120, 120);;*/
+/*}*/
 /*.noticeTable {*/
 /*    border-collapse: collapse;*/
 /*    border-top: 2px solid rgb(143, 148, 46);*/

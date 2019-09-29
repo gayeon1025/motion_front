@@ -45,9 +45,17 @@ hr {
     border-top: 2px solid rgb(143, 148, 46);
     border-bottom: 2px solid rgb(143, 148, 46);
     margin: 50px auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    color: rgb(120, 120, 120);;
 }
 .table > thead {
     border-bottom: 2px solid rgb(143, 148, 46);
+}
+.table > tbody > * {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    color: rgb(120, 120, 120);;
 }
 .table > tbody > tr {
     border-bottom: 1px solid rgb(180, 180, 180);
