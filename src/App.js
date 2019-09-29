@@ -7,6 +7,7 @@ import Notice from "./Pages/Notice";
 import Board from "./Pages/Board";
 import Schedule from "./Pages/Schedule";
 import Education from "./Pages/Edu";
+import Exam from "./Pages/Exam";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/board" component={ Board }/>
           <Route path="/calendar" component={ Schedule }/>
           <Route path="/edu" component={ Education }/>
+          <Route path="/exam" component={ Exam }/>
         </Router>
       </header>
     </div>

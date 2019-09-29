@@ -1,0 +1,64 @@
+.examHeaderDiv {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+    padding: 150px 0;
+}
+.examHeaderTitle {
+    font-weight: bold;
+    font-size: 70px;
+    width: 180px;
+    margin: auto auto;
+}
+.examHeaderSubTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+.examContentsDiv {
+    margin: 50px auto;
+}
+.examContentTitle {
+    color: rgb(151, 151, 151);
+    width: 200px;
+    margin: 50px auto;
+    padding: 10px 0;
+    border-bottom: 2px solid rgb(130, 130, 130);
+    font-weight: bold;
+    font-size: 27px;
+}
+.gradeSelectionDiv {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+.grades {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+}
+.grade-item {
+    position: relative;
+    display: block;
+    padding: 30px 90px;
+    margin: 20px;
+    line-height: 1.25;
+    color: rgb(143, 148, 46);
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    font-size: 27px;
+    border-radius: 20px;
+}
+.grade-item:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+    transition-property: background-color;
+    background-color: rgb(192, 200, 98);
+}
