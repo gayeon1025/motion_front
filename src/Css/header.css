@@ -1,0 +1,58 @@
+/*Header*/
+#headerBar {
+  width: 100%;
+  height: 100px;
+  padding: 15px 20px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.30);
+  position: static;
+  left: 0;
+  top: 0;
+}
+#navigation{
+  display: flex;
+  height: 70px;
+  width: 1300px;
+  margin: 0 auto;
+}
+#logoContainer {
+  display:inline-block;
+  margin-right: 200px;
+}
+#menuContainer {
+  display:inline-block;
+  line-height: 70px;
+  margin-left: 150px;
+}
+.headerLogo {
+  width: 75px;
+  height: 100%;
+  display:inline-block;
+}
+.navMenu {
+  display:inline;
+  border-left:1px solid #999;
+  font:bold 12px Dotum;
+  padding:0 15px;
+  vertical-align: middle;
+}
+.menuText {
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 18px;
+}
+.menuText:hover {
+  cursor: pointer;
+  background-color: rgb(192, 200, 98);
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+.active{
+  background-color: rgb(192, 200, 98);
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: #FFFFFF;
+}

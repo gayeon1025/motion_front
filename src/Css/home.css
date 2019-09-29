@@ -1,0 +1,176 @@
+
+/*Main(Join) Section*/
+.mainContainer {
+    background-image: url("../Images/home_pattern.jpg");
+    background-repeat: no-repeat;
+    width: auto;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+.mainTextContainer {
+    position: absolute;
+    left: 250px;
+    top: 130px;
+    text-align: center;
+}
+.slogan {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+}
+.comment {
+    font-family: 'Sunflower', sans-serif;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 26px;
+}
+.joinButton {
+    width: 200px;
+    padding: 13px 20px;
+    margin: 0 auto;
+    font-size: 20px;
+    background-color: #121212;
+    font-family: 'Sunflower', sans-serif;
+}
+.joinButton:hover {
+    cursor: pointer;
+}
+.rocket {
+    width: 700px;
+    position: absolute;
+    left: 950px;
+    top: 100px;
+    animation-name: speed;
+    animation-duration: 2s;
+}
+@keyframes speed {
+    0% {transform: translateY(300px);}
+    to {transform: translateY(0);}
+}
+#clouds {
+    fill: #fff;
+    stroke: #fff;
+    overflow: hidden;
+    margin-top: 450px;
+}
+
+/*IntroVideo Section*/
+.introDiv {
+    padding: 130px 0;
+    background-color: white;
+    margin: 0 auto;
+}
+.videoDiv {
+     width: 600px;
+ }
+.introVideo {
+    width: 600px;
+}
+.introCommentDiv {
+    width: 600px;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 100px;
+    vertical-align: top;
+    z-index: 30;
+}
+.IntroComment {
+    color: rgb(153, 153, 153);
+    font-family: 'Sunflower', sans-serif;
+    font-size: 20px;
+}
+.IntroTitle {
+    color: black;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+.IntroContent {
+    color: rgb(155, 155, 155);
+    font-family: 'Sunflower', sans-serif;
+    font-size: 18px;
+}
+
+/*Activity Section*/
+.activityDiv {
+    padding: 130px 0;
+    background-color: white;
+    margin: 0 auto;
+}
+.activityTitle {
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 35px;
+}
+.activityComment {
+    color: rgb(153, 153, 153);
+    font-family: 'Sunflower', sans-serif;
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+.column {
+    float: left;
+    width: 21%;
+    padding: 15px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width:600px) {
+    .column {
+        width: 50%;
+    }
+}
+.card {
+    /*border: 1px solid black;*/
+    margin: 2%;
+    text-align: center;
+    box-shadow: 0px 2px 16px 0px rgba(204,204,204,1);
+}
+.imageBorder {
+    width: 200px;
+    height: 150px;
+    margin: 20px auto;
+    border: 3px solid rgb(237, 237, 237);
+    position: relative;
+}
+.cardImage {
+    width: 60%;
+    margin: auto auto;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+}
+.cardTitle {
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+}
+.cardContents {
+    margin: 20px auto;
+    color: rgb(151, 151, 151);
+    font-family: 'Sunflower', sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+/*Join Section*/
+.joinDiv {
+    padding: 40px 20px;
+    background-color: #121212;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+.joinDiv:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property: background-color;
+    background-color: rgb(192, 200, 98);
+}

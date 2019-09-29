@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300&display=swap');
+
+/*Common*/
+html, body {
+    background-color: white;
+}
+* {
+    box-sizing: border-box;
+}
+.contents {
+    padding: 0 10%;
+}
+.horizontal {
+    display: inline-block;
+}
+.vertical {
+    display: block;
+}
+.centerAlignment {
+    text-align: center;
+}
+.fullWidth {
+    width: 100%;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+hr {
+    margin: 0 175px;
+}
