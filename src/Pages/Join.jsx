@@ -3,7 +3,6 @@ import Header from '../Common/Header'
 import Footer from "../Common/Footer";
 import '../Css/common.css'
 import '../Css/join.css'
-import Rocket from "../Images/rocket.png";
 
 class Join extends Component{
     constructor (props) {
@@ -37,7 +36,7 @@ const JoinContents = () => {
             <div className={"contentTitle"}>회원가입</div>
             <div className={"contentSubtitle notoSansFont"}>환영합니다 :-)</div>
             <form>
-                <table>
+                <table className={"joinTable"}>
                     <tbody>
                         <tr>
                             <th className={"notoSansFont"}> 이름 </th>

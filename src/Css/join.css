@@ -23,32 +23,35 @@
 }
 .contentTitle {
     color: rgb(151, 151, 151);
-    width: 300px;
+    width: 200px;
     margin: 0 auto;
+    padding: 10px 0;
     border-bottom: 2px solid rgb(130, 130, 130);
+    font-weight: bold;
+    font-size: 27px;
 }
 .contentSubtitle {
     color: rgb(151, 151, 151);
     font-size: 20px;
     margin-top: 40px;
 }
-table {
+.joinTable {
     margin: 0px auto;
     padding: 40px 80px;
     border-spacing: 20px;
     border: 1px solid rgb(188, 192, 104);
 }
-th {
+.joinTable > tbody > tr > th {
     color: rgb(120, 120, 120);
     font-weight: bold;
     font-size: 23px;
     width: 200px;
     border-right: 2px solid rgb(143, 148, 46);
 }
-td {
+.joinTable > tbody > tr > td {
     width: 200px;
 }
-td > input {
+.joinTable > tbody > tr > td > input {
     float: left;
     width: 250px;
     margin: 0 20px;
