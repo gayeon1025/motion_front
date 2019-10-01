@@ -9,7 +9,7 @@ import Schedule from "./Pages/Schedule";
 import Education from "./Pages/Edu";
 import Exam from "./Pages/Exam";
 import Equipment from "./Pages/Equipment";
-
+import Gallery from "./Pages/Gallery";
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
           <Route path="/edu" component={ Education }/>
           <Route path="/exam" component={ Exam }/>
           <Route path="/equipment" component={ Equipment }/>
+          <Route path="/gallery" component={ Gallery }/>
         </Router>
       </header>
     </div>
