@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Logo from '../../Images/motion_logo.png';
 import '../../Css/common.css'
-import '../Css/header.css';
+import '../../Css/header.css';
 
 class Header extends Component {
     constructor (props) {
