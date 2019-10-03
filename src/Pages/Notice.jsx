@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Header from '../Common/Header'
-import Footer from "../Common/Footer"
+import Header from './Common/Header'
+import Footer from "./Common/Footer"
 import '../Css/common.css'
 import '../Css/notice.css'
-import Pagination from "../Common/Pagination";
+import Pagination from "./Common/Pagination";
 
 class Notice extends Component {
     render() {

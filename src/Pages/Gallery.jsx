@@ -1,9 +1,9 @@
 import React, { Component, useState } from 'react'
-import Header from '../Common/Header'
-import Footer from "../Common/Footer"
+import Header from './Common/Header'
+import Footer from "./Common/Footer"
 import '../Css/common.css'
 import '../Css/gallery.css'
-import Pagination from "../Common/Pagination";
+import Pagination from "./Common/Pagination";
 import AwesomeSlider from 'react-awesome-slider';
 import AwesomeSliderStyles from 'react-awesome-slider/src/components/styled/scale-out-animation/styles.scss';
 

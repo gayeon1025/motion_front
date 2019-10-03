@@ -65,6 +65,7 @@
  }
 .introVideo {
     width: 600px;
+    outline: none;
 }
 .introCommentDiv {
     width: 600px;

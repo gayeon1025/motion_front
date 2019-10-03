@@ -10,6 +10,7 @@ import Education from "./Pages/Edu";
 import Exam from "./Pages/Exam";
 import Equipment from "./Pages/Equipment";
 import Gallery from "./Pages/Gallery";
+import Login from "./Pages/Login";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/exam" component={ Exam }/>
           <Route path="/equipment" component={ Equipment }/>
           <Route path="/gallery" component={ Gallery }/>
+          <Route path="/login" component={ Login }/>
         </Router>
       </header>
     </div>

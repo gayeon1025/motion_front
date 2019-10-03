@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Header from '../Common/Header'
-import Footer from "../Common/Footer"
+import Header from './Common/Header'
+import Footer from "./Common/Footer"
 import '../Css/common.css'
 import '../Css/schedule.css'
 import Calendar from '@toast-ui/react-calendar';
