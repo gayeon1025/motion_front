@@ -43,6 +43,7 @@
   text-decoration: none;
   font-family: 'Do Hyeon', sans-serif;
   font-size: 18px;
+  /*display: inline-block;*/
 }
 .menuText:hover {
   cursor: pointer;

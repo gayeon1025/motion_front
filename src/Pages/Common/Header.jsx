@@ -2,10 +2,54 @@ import React, { Component } from 'react';
 import Logo from '../../Images/motion_logo.png';
 import '../../Css/common.css'
 import '../../Css/header.css';
+import * as config from "../../Config/config"
+import * as accountService from "../../Services/accounts"
 
 class Header extends Component {
     constructor (props) {
         super(props)
+        this.state = {
+            loginState : this.getUserLoginState()
+        }
+    }
+
+    getUserLoginState = () => {
+        accountService.getUserLoginState()
+            .then(response => {
+                let user = response.data;
+                if (user.userId == null) {
+                    this.setState({loginState : false}, () => {
+                        if (window.location.href != config.FRONT_SERVER_PREFIX + "/login") {
+                            alert("로그인 후 이용해 주세요")
+                            window.location.href = "/login"
+                        }
+                    })
+                }
+                else {
+                    this.setState({loginState : true})
+                }
+            })
+            .catch(error => {
+                console.log("Error for getting login state : " + error)
+            })
+    }
+
+    logout = () => {
+        let logout = window.confirm("로그아웃 하시겠습니까?")
+        if (logout) {
+            accountService.logout()
+                .then(response => {
+                    this.setState({loginState : false})
+                    alert("로그아웃 되었습니다")
+                })
+                .catch(error => {
+                    alert("오류가 발생했습니다.")
+                    window.location.href = "/home"
+                })
+        }
+        else {
+            alert("취소")
+        }
     }
 
     render() {
@@ -14,7 +58,21 @@ class Header extends Component {
                 <div id={"headerBar"} >
                     <nav id={"navigation"}>
                         <LogoContainer/>
-                        <MenuContainer/>
+                        <div id="menuContainer" className={"horizontal"}>
+                            <ul className="nav navbar-nav navbar-right menu-top">
+                                <li className = { "navMenu" }><a className="active menuText" href="/home">Home</a></li>
+                                <li className = { "navMenu" }><a className="menuText" href="/notice">공지사항 </a></li>
+                                <li className = { "navMenu" }><a className="menuText" href="/board">게시판</a></li>
+                                <li className = { "navMenu" }><a className="menuText" href="/calendar">일정</a></li>
+                                <li className = { "navMenu" }><a className="menuText" href="/edu">교육</a></li>
+                                <li className = { "navMenu" }><a className="menuText" href="/exam">기출문제</a></li>
+                                <li className = { "navMenu" }><a className="menuText" href="/equipment">물품대여</a></li>
+                                <li className = { "navMenu" }><a className="menuText" href="/gallery">사진첩</a></li>
+                                <li className = { "navMenu" } >
+                                    { this.state.loginState ? (<a className="menuText" onClick={() => {this.logout()}}>로그아웃</a>) : (<a className="menuText" href="/login">로그인</a>)}
+                                </li>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
                 <div className={"mainPhoto"}>
@@ -32,21 +90,6 @@ class Header extends Component {
 const LogoContainer = () => (
     <div id="logoContainer" className={"horizontal"}>
         <a className="headerLogo" href="/home"><img className="headerLogo" src={ Logo } alt="image"/></a>
-    </div>
-)
-const MenuContainer = () => (
-    <div id="menuContainer" className={"horizontal"}>
-        <ul className="nav navbar-nav navbar-right menu-top">
-            <li className = { "navMenu" }><a className="active menuText" href="/home">Home</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="/notice">공지사항 </a></li>
-            <li className = { "navMenu" }><a className="menuText" href="/board">게시판</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="/calendar">일정</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="/edu">교육</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="/exam">기출문제</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="/equipment">물품대여</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="/gallery">사진첩</a></li>
-            <li className = { "navMenu" }><a className="menuText" href="/login">로그인</a></li>
-        </ul>
     </div>
 )
 
