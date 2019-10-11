@@ -1,9 +1,19 @@
 import axios from 'axios';
+import * as config from "../Config/config"
 import headerConfig from "./config"
 
-// const server = "http://168.188.124.190:8000"
-const server = "http://localhost:8000"
-
 export function addNewUser(userInfo) {
-    return axios.post(server + "/join", userInfo, headerConfig)
+    return axios.post(config.BACK_SERVER_PREFIX + "/user/join", userInfo, headerConfig)
+}
+
+export function logout() {
+    return axios.post(config.BACK_SERVER_PREFIX + "/user/logout", {}, headerConfig)
+}
+
+export function login(userInfo) {
+    return axios.post(config.BACK_SERVER_PREFIX + "/user/login", userInfo, headerConfig)
+}
+
+export function getUserLoginState() {
+    return axios.post(config.BACK_SERVER_PREFIX + "/user/state", {}, headerConfig)
 }
