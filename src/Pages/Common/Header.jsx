@@ -17,9 +17,10 @@ class Header extends Component {
         accountService.getUserLoginState()
             .then(response => {
                 let user = response.data;
+                console.log(user);
                 if (user.userId == null) {
                     this.setState({loginState : false}, () => {
-                        if (window.location.href != config.FRONT_SERVER_PREFIX + "/login") {
+                        if (window.location.href != config.FRONT_SERVER_PREFIX + "/login" && window.location.href != config.FRONT_SERVER_PREFIX + "/home") {
                             alert("로그인 후 이용해 주세요")
                             window.location.href = "/login"
                         }
