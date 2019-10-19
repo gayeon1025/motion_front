@@ -57,18 +57,11 @@ class LoginContents extends Component{
 
     successToLogin = (data) => {
         if (data == true) {
-            alert("로그인 성공!")
             window.location.href = "/home"
-            // let state = loginService.getUserLoginState().then(response => console.log(response))
         }
         else {
             alert("잘못된 유저 정보입니다")
         }
-    }
-
-    failToLogin = (error) => {
-        // alert(error);
-        // alert("잘못된 유저 정보입니다.")
     }
 
     render() {
@@ -76,7 +69,6 @@ class LoginContents extends Component{
             <div className={"contents loginContentsDiv"}>
                 <div className={"contentTitle"}>로그인</div>
                 <div className={"contentSubtitle notoSansFont"}>Have a good day :-)</div>
-                {/*<form action={"http://localhost:8000/login"} method={"POST"}>*/}
                 <table className={"loginTable"}>
                     <tbody>
                     <tr>
@@ -90,10 +82,8 @@ class LoginContents extends Component{
                     </tbody>
                 </table>
 
-                {/*<input className={"notoSansFont loginButton"} type={"submit"} value={"로그인"}/>*/}
                 <button className={"notoSansFont loginButton"} onClick={() => {this.login()}}>로그인</button>
                 <button className={"notoSansFont signUpButton"} onClick={() => {window.location.href="/join"}}>회원가입</button>
-                {/*</form>*/}
             </div>
         )
     }
