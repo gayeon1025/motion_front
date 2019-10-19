@@ -4,14 +4,22 @@ import Footer from "./Common/Footer"
 import '../Css/common.css'
 import '../Css/notice.css'
 import Pagination from "./Common/Pagination";
+import * as userValidation from './Common/UserValidation'
 
 class Notice extends Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            loggedInUser : userValidation.getUserLoginState(this)
+        }
+    }
+
     render() {
         return (
             <div className={"fullWidth"}>
                 <Header/>
                     <NoticeHeader/>
-                    <NoticeContents/>
+                    <NoticeContents userRoll={this.state.loggedInUser.userRoll}/>
                 <Footer/>
             </div>
         )
@@ -32,6 +40,10 @@ class NoticeContents extends Component {
         return (
             <div className={"contents noticeContentsDiv"}>
                 <div className={"noticeContentTitle"}>공지사항</div>
+                <div className={"newNoticeButtonDiv fullWidth"} style={{display : this.props.userRoll == "ADMIN" ? "block" : "none"}}>>
+                    {/*<div className={"galleryModal"} style={{display : this.state.isVisible ? "block" : "none"}}>*/}
+                    <button className={"newNoticeButton notoSansFont"} type={"button"}>글쓰기</button>
+                </div>
                 <div className={"noticeTableDiv"}>
                     <table className={"table"}>
                         <thead>

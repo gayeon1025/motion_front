@@ -1,6 +1,9 @@
 import axios from 'axios';
 import * as config from "../Config/config"
 import headerConfig from "./config"
+const api = axios.create({
+    withCredentials: true
+});
 
 export function addNewUser(userInfo) {
     return axios.post(config.BACK_SERVER_PREFIX + "/user/join", userInfo, headerConfig)
@@ -15,5 +18,5 @@ export function login(userInfo) {
 }
 
 export function getUserLoginState() {
-    return axios.post(config.BACK_SERVER_PREFIX + "/user/state", {}, headerConfig)
+    return axios.post(config.BACK_SERVER_PREFIX + "/user/state", )
 }
