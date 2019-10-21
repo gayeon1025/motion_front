@@ -6,17 +6,17 @@ const api = axios.create({
 });
 
 export function addNewUser(userInfo) {
-    return axios.post(config.BACK_SERVER_PREFIX + "/user/join", userInfo, headerConfig)
+    return axios.post(config.BACK_SERVER_PREFIX + "/user", userInfo, headerConfig)
 }
 
 export function logout() {
-    return axios.post(config.BACK_SERVER_PREFIX + "/user/logout", {}, headerConfig)
+    return axios.post(config.BACK_SERVER_PREFIX + "/users/logout", {}, headerConfig)
 }
 
 export function login(userInfo) {
-    return axios.post(config.BACK_SERVER_PREFIX + "/user/login", userInfo, headerConfig)
+    return axios.post(config.BACK_SERVER_PREFIX + "/users/login", userInfo, headerConfig)
 }
 
 export function getUserLoginState() {
-    return axios.post(config.BACK_SERVER_PREFIX + "/user/state", )
+    return axios.post(config.BACK_SERVER_PREFIX + "/users/state", )
 }
