@@ -18,5 +18,5 @@ export function login(userInfo) {
 }
 
 export function getUserLoginState() {
-    return axios.post(config.BACK_SERVER_PREFIX + "/users/state", )
+    return axios.get(config.BACK_SERVER_PREFIX + "/users/state", )
 }
