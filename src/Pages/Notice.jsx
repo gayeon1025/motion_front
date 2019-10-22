@@ -36,13 +36,17 @@ const NoticeHeader = () => (
 )
 
 class NoticeContents extends Component {
+
+    addNewNotice = () => {
+        window.location.href = "/notice/new"
+    }
+
     render() {
         return (
             <div className={"contents noticeContentsDiv"}>
                 <div className={"noticeContentTitle"}>공지사항</div>
                 <div className={"newNoticeButtonDiv fullWidth"} style={{display : this.props.userRoll == "ADMIN" ? "block" : "none"}}>>
-                    {/*<div className={"galleryModal"} style={{display : this.state.isVisible ? "block" : "none"}}>*/}
-                    <button className={"newNoticeButton notoSansFont"} type={"button"}>글쓰기</button>
+                    <button className={"newNoticeButton notoSansFont"} type={"button"} onClick={ this.addNewNotice }>글쓰기</button>
                 </div>
                 <div className={"noticeTableDiv"}>
                     <table className={"table"}>
