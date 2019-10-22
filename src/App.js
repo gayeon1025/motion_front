@@ -22,7 +22,7 @@ function App() {
         <Router exact path="/" component={App}>
           <Route path="/home" component={ Home }/>
           <Route path="/join" component={ Join }/>
-          <Route path="/notice" component={ Notice }/>
+          <Route exact path="/notice" component={ Notice }/>
           <Route exact path="/notice/new" component={ NoticeEditor }/>
           <Route path="/board" component={ Board }/>
           <Route path="/calendar" component={ Schedule }/>
