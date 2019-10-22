@@ -81,14 +81,16 @@ class EditorContents extends Component {
     render() {
         return (
             <div className={"noticeEditorContentsDiv"}>
-                <div class={"newNoticeTitleDiv"}>
+                <div className={"newNoticeTitleDiv"}>
                     <table className={"noticeTitleTable"}>
-                        <tr>
-                            <td className={"noticeTitleTag robotoFont"}> 제목 </td>
-                            <td>
-                                <input id={"noticeTitleInput"} className={"notoSansFont"} type={"text"} placeholder={"제목을 입력하세요"} autoFocus={true}/>
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td className={"noticeTitleTag robotoFont"}> 제목 </td>
+                                <td>
+                                    <input id={"noticeTitleInput"} className={"notoSansFont"} type={"text"} placeholder={"제목을 입력하세요"} autoFocus={true}/>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
                 <div className={"noticeEditor"}>
