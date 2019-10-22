@@ -11,6 +11,9 @@ import Exam from "./Pages/Exam";
 import Equipment from "./Pages/Equipment";
 import Gallery from "./Pages/Gallery";
 import Login from "./Pages/Login";
+import axios from 'axios';
+import NoticeEditor from "./Pages/NoticeEditor";
+axios.defaults.withCredentials = true
 
 function App() {
   return (
@@ -20,6 +23,7 @@ function App() {
           <Route path="/home" component={ Home }/>
           <Route path="/join" component={ Join }/>
           <Route path="/notice" component={ Notice }/>
+          <Route exact path="/notice/new" component={ NoticeEditor }/>
           <Route path="/board" component={ Board }/>
           <Route path="/calendar" component={ Schedule }/>
           <Route path="/edu" component={ Education }/>
