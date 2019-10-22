@@ -38,6 +38,28 @@
     font-weight: 700;
     margin-bottom: 50px;
 }
+.newPostButtonDiv {
+    text-align: right;
+}
+.newPostButton {
+    color: rgb(143, 148, 46);
+    background-color: transparent;
+    background-image: none;
+    border-color: rgb(143, 148, 46);
+    border-radius: 10px;
+    font-size: 20px;
+    width: 150px;
+    padding: 5px 25px;
+    margin: 10px 75px;
+    font-weight: bold;
+}
+.newPostButton:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+    transition-property: background-color;
+    background-color: rgb(192, 200, 98);
+}
 
 /*Table Layout*/
 .boardNo {
