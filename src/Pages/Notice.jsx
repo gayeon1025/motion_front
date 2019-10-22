@@ -21,7 +21,7 @@ class Notice extends Component {
             <div className={"fullWidth"}>
                 <Header/>
                     <NoticeHeader/>
-                    <NoticeContents userRoll={this.state.loggedInUser.userRoll} offset={this.props.offset} limit={this.props.limit}/>
+                    <NoticeContents userRoll={this.state.loggedInUser.userRoll} offset={this.props.match.params.offset} limit={this.props.match.params.limit}/>
                 <Footer/>
             </div>
         )
@@ -88,18 +88,6 @@ class NoticeContents extends Component {
                         </tr>
                         </thead>
                         <tbody id={"noticeTableBody"}>
-                            {/*<tr>*/}
-                            {/*    <th className={"noticeNo"}>1</th>*/}
-                            {/*    <td className={"noticeTitle"}>첫 공지입니다.</td>*/}
-                            {/*    <td className={"noticeAuthor"}>김가연</td>*/}
-                            {/*    <td className={"noticeDate"}>2019.09.29</td>*/}
-                            {/*</tr>*/}
-                            {/*<tr>*/}
-                            {/*    <th className={"noticeNo"}>2</th>*/}
-                            {/*    <td className={"noticeTitle"}>콜라톤 관련 공지입니다.</td>*/}
-                            {/*    <td className={"noticeAuthor"}>김가연</td>*/}
-                            {/*    <td className={"noticeDate"}>2019.08.29</td>*/}
-                            {/*</tr>*/}
                         </tbody>
                     </table>
                     <Pagination/>
