@@ -24,7 +24,7 @@ function App() {
           <Route path="/join" component={ Join }/>
           <Route exact path="/notice/:offset/:limit" component={ Notice }/>
           <Route exact path="/notice/new" component={ NoticeEditor }/>
-          <Route path="/board" component={ Board }/>
+          <Route exact path="/board/:offset/:limit" component={ Board }/>
           <Route path="/calendar" component={ Schedule }/>
           <Route path="/edu" component={ Education }/>
           <Route path="/exam" component={ Exam }/>
