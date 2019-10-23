@@ -64,7 +64,7 @@ class BoardContents extends Component {
     printNoPost = () => {
         document.getElementById("boardTableBody").innerHTML
             = "<tr>" +
-                "<td colspan='4'>등록된 공지가 없습니다</td>" +
+                "<td colspan='4'>등록된 게시글이 없습니다</td>" +
               "</tr>"
 
     }
