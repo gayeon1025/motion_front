@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { FC, ReactNode } from 'react'
 import Header from './Common/Header'
 import Footer from "./Common/Footer"
 import '../Css/common.css'
@@ -6,40 +6,28 @@ import '../Css/schedule.css'
 import Calendar from '@toast-ui/react-calendar';
 import 'tui-calendar/dist/tui-calendar.css';
 
-class Schedule extends Component {
-    render() {
-        return (
-            <div className={"fullWidth"}>
-                <Header/>
-                    <ScheduleHeader/>
-                    <ScheduleContents/>
-                    {/*<MyCalendar/>*/}
-                <Footer/>
-            </div>
-        )
-    }
-}
+const Schedule: FC = () => {
+    return (
+        <div className={"fullWidth"}>
+            <Header />
+            {ScheduleHeader}
+            {ScheduleContents}
+            {/*<MyCalendar/>*/}
+            <Footer />
+        </div>
+    );
+};
 
-const ScheduleHeader = () => (
+const ScheduleHeader: ReactNode = (
     <div className={"fullWidth scheduleHeaderDiv"}>
         <div className={"calendarTextDiv"}>
             <div className={"scheduleHeaderTitle robotoFont"}> Schedule </div>
             <div className={"scheduleHeaderSubTitle notoSansFont"}> 일정 </div>
         </div>
     </div>
-)
+);
 
-const ScheduleContents = () => (
-    <div className={"fullWidth scheduleContentsDiv"}>
-        <div className={"scheduleContentTitle"}>일정</div>
-        <div className={"scheduleContentComment notoSansFont"}>구체적인 사항은 임원진에게 문의해 주세요 :-)</div>
-        <div className={"calendarDiv"}>
-            <MyCalendar/>
-        </div>
-    </div>
-)
-
-const MyCalendar = () => (
+const ScheduleCalendar: ReactNode = (
     <Calendar
         height="500px"
 
@@ -70,7 +58,7 @@ const MyCalendar = () => (
             milestone(schedule) {
                 return `<span style="color:#fff;background-color: ${schedule.bgColor};">${
                     schedule.title
-                }</span>`;
+                    }</span>`;
             },
             milestoneTitle() {
                 return 'Milestone';
@@ -104,4 +92,14 @@ const MyCalendar = () => (
     />
 );
 
-export default Schedule
+const ScheduleContents: ReactNode = (
+    <div className={"fullWidth scheduleContentsDiv"}>
+        <div className={"scheduleContentTitle"}>일정</div>
+        <div className={"scheduleContentComment notoSansFont"}>구체적인 사항은 임원진에게 문의해 주세요 :-)</div>
+        <div className={"calendarDiv"}>
+            {ScheduleCalendar}
+        </div>
+    </div>
+);
+
+export default Schedule;
