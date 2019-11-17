@@ -33,13 +33,13 @@ const Join: FC = () => {
     const addNewUser: () => void = () => {
         accountService.addNewUser(inputState)
             .then((response) => {
-                if (response.data === "duplicatedKey") {
+                if (response && response.data === "duplicatedKey") {
                     document.getElementById("infoMsgDiv")!.innerHTML = '이미 존재하는 회원입니다';
                     setTimeout(() => {
                         document.getElementById("infoMsgDiv")!.innerHTML = '';
                     }, 1500);
                 }
-                else if (response.data === 'error') {
+                else if (response && response.data === 'error') {
                     alert('오류가 발생했습니다.');
                 }
                 else {

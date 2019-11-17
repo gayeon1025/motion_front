@@ -30,11 +30,14 @@ const Header: FC = () => {
         const getUserLoginState: () => void = async () => {
             await accountService.getUserLoginState()
                 .then((response) => {
-                    const user = response.data;
-                    if (user.userId === null) {
-                        setLoginState(false);
-                    } else {
-                        setLoginState(true);
+                    console.log(response);
+                    if (response) {
+                        const user = response.data;
+                        if (user.userId === null) {
+                            setLoginState(false);
+                        } else {
+                            setLoginState(true);
+                        }
                     }
                 })
                 .catch((error) => {

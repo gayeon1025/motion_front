@@ -14,7 +14,7 @@ class NoticeEditor extends Component {
     constructor (props) {
         super(props)
         this.state = {
-            loggedInUser : userValidation.getUserLoginState(this)
+            loggedInUser : userValidation.getUserLoginData(this)
         }
     }
 

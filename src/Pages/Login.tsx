@@ -16,7 +16,9 @@ const Login: FC = () => {
         };
         accountService.login(userInfo)
             .then((response) => {
-                successToLogin(response.data);
+                if (response) {
+                    successToLogin(response.data);
+                }
             })
             .catch((error) => {
                 alert(error);

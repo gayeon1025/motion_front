@@ -11,6 +11,7 @@ import Exam from "./Pages/Exam";
 import Equipment from "./Pages/Equipment";
 // import Gallery from "./Pages/Gallery";
 import Login from "./Pages/Login";
+import NoticeEditor from "./Pages/NoticeEditor";
 
 const App: FC = () => {
   return (
@@ -21,7 +22,9 @@ const App: FC = () => {
             <Route path="/" exact component={App} />
             <Route path="/home" component={Home} />
             <Route path="/join" component={Join} />
-            <Route path="/notice" component={Notice} />
+            <Route exact path="/notice/:offset/:limit" component={Notice} />
+            <Route exact path="/notice/new" component={NoticeEditor} />
+            <Route exact path="/board/:offset/:limit" component={Board} />
             <Route path="/board" component={Board} />
             <Route path="/calendar" component={Schedule} />
             <Route path="/edu" component={Education} />
