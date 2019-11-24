@@ -25,6 +25,7 @@ const Join: FC = () => {
     });
 
     const handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void = (e) => {
+        console.log(e.target.name, e.target.value);
         setInputState({
             ...inputState,
             [e.target.name]: e.target.value,
@@ -60,27 +61,27 @@ const Join: FC = () => {
                 <tbody>
                     <tr>
                         <th className={"notoSansFont"}> 이름 </th>
-                        <td><input value={inputState.userName} onChange={handleChange} id={"userName"} className={"notoSansFont"} type={"text"} placeholder={"이름"} autoFocus required /></td>
+                        <td><input value={inputState.userName} onChange={handleChange} name={"userName"} className={"notoSansFont"} type={"text"} placeholder={"이름"} autoFocus required /></td>
                     </tr>
                     <tr>
                         <th className={"notoSansFont"}> 학번 </th>
-                        <td><input value={inputState.userId} onChange={handleChange} id={"userId"} className={"notoSansFont"} type={"text"} placeholder={"학번"} minLength={9} maxLength={9} required /></td>
+                        <td><input value={inputState.userId} onChange={handleChange} name={"userId"} className={"notoSansFont"} type={"text"} placeholder={"학번"} minLength={9} maxLength={9} required /></td>
                     </tr>
                     <tr>
                         <th className={"notoSansFont"}> 비밀번호 </th>
-                        <td><input value={inputState.userPwd} onChange={handleChange} id={"userPwd"} className={"notoSansFont"} type={"password"} placeholder={"비밀번호"} minLength={4} maxLength={20} required /></td>
+                        <td><input value={inputState.userPwd} onChange={handleChange} name={"userPwd"} className={"notoSansFont"} type={"password"} placeholder={"비밀번호"} minLength={4} maxLength={20} required /></td>
                     </tr>
                     <tr>
                         <th className={"notoSansFont"}> 전화번호 </th>
-                        <td><input value={inputState.userPhone} onChange={handleChange} id={"userPhone"} className={"notoSansFont"} type={"tel"} placeholder={"'-'를 제외하고 입력해 주세요'"} required /></td>
+                        <td><input value={inputState.userPhone} onChange={handleChange} name={"userPhone"} className={"notoSansFont"} type={"tel"} placeholder={"'-'를 제외하고 입력해 주세요'"} required /></td>
                     </tr>
                     <tr>
                         <th className={"notoSansFont"}> 이메일 </th>
-                        <td><input value={inputState.userEmail} onChange={handleChange} id={"userEmail"} className={"notoSansFont"} type={"email"} placeholder={"이메일"} /></td>
+                        <td><input value={inputState.userEmail} onChange={handleChange} name={"userEmail"} className={"notoSansFont"} type={"email"} placeholder={"이메일"} /></td>
                     </tr>
                     <tr>
                         <th className={"notoSansFont"}> 생년월일 </th>
-                        <td><input value={inputState.userBirth} onChange={handleChange} id={"userBirth"} className={"notoSansFont"} type={"date"} /></td>
+                        <td><input value={inputState.userBirth} onChange={handleChange} name={"userBirth"} className={"notoSansFont"} type={"date"} /></td>
                     </tr>
                 </tbody>
             </table>
