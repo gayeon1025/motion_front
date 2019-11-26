@@ -13,6 +13,8 @@ import Gallery from "./Pages/Gallery";
 import Login from "./Pages/Login";
 import axios from 'axios';
 import NoticeEditor from "./Pages/NoticeEditor";
+import BoardEditor from "./Pages/BoardEditor";
+import ExamEditor from "./Pages/ExamEditor";
 axios.defaults.withCredentials = true
 
 function App() {
@@ -25,9 +27,11 @@ function App() {
           <Route exact path="/notice/:offset/:limit" component={ Notice }/>
           <Route exact path="/notice/new" component={ NoticeEditor }/>
           <Route exact path="/board/:offset/:limit" component={ Board }/>
+          <Route exact path="/board/new" component={ BoardEditor }/>
           <Route path="/calendar" component={ Schedule }/>
-          <Route path="/edu" component={ Education }/>
-          <Route path="/exam" component={ Exam }/>
+          <Route exact path="/edu/:offset/:limit" component={ Education }/>
+          <Route exact path="/exam" component={ Exam }/>
+          <Route exact path="/exam/new" component={ ExamEditor }/>
           <Route path="/equipment" component={ Equipment }/>
           <Route path="/gallery" component={ Gallery }/>
           <Route path="/login" component={ Login }/>
