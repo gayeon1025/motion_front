@@ -65,7 +65,7 @@ class Header extends Component {
                                 <li className = { "navMenu" }><a className="menuText" href="/notice/1/15">공지사항 </a></li>
                                 <li className = { "navMenu" }><a className="menuText" href="/board/1/15">게시판</a></li>
                                 <li className = { "navMenu" }><a className="menuText" href="/calendar">일정</a></li>
-                                <li className = { "navMenu" }><a className="menuText" href="/edu">교육</a></li>
+                                <li className = { "navMenu" }><a className="menuText" href="/edu/1/15">교육</a></li>
                                 <li className = { "navMenu" }><a className="menuText" href="/exam">기출문제</a></li>
                                 <li className = { "navMenu" }><a className="menuText" href="/equipment">물품대여</a></li>
                                 <li className = { "navMenu" }><a className="menuText" href="/gallery">사진첩</a></li>

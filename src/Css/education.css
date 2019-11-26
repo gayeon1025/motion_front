@@ -17,6 +17,28 @@
     font-size: 20px;
     font-weight: bold;
 }
+.newEduButtonDiv {
+    text-align: right;
+}
+.newEduButton {
+    color: rgb(143, 148, 46);
+    background-color: transparent;
+    background-image: none;
+    border-color: rgb(143, 148, 46);
+    border-radius: 10px;
+    font-size: 20px;
+    width: 150px;
+    padding: 5px 25px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.newEduButton:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+    transition-property: background-color;
+    background-color: rgb(192, 200, 98);
+}
 .eduContentsDiv {
     margin: 50px auto 0 auto;
 }
@@ -34,4 +56,25 @@
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 50px;
+}
+
+/*Table Layout*/
+.eduNo {
+    width: 100px;
+}
+.eduTitle {
+    width: 750px;
+}
+.eduTitle:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.eduAuthor {
+    width: 150px;
+}
+.eduState {
+    width: 150px;
+}
+.eduDate {
+    width: 200px;
 }
