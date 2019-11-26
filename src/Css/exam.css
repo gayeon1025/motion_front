@@ -18,10 +18,14 @@
     font-size: 20px;
     font-weight: bold;
 }
+.newExamButtonDiv {
+    text-align: right;
+}
 
 /*Contents*/
 .examContentsDiv {
     margin: 50px auto;
+    text-align: center;
 }
 .examContentTitle {
     color: rgb(151, 151, 151);
@@ -32,10 +36,22 @@
     font-weight: bold;
     font-size: 27px;
 }
+.newExamButton {
+    border: none;
+    color: rgb(143, 148, 46);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 100px;
+    outline: none;
+}
+.newExamButton:hover {
+    border-bottom: 1px solid rgb(143, 148, 46);
+    cursor: pointer;
+}
 .gradeSelectionDiv {
     width: 1200px;
     margin: 0 auto;
-    padding-top: 70px;
+    padding-top: 30px;
 }
 .grades {
     display: -webkit-box;
@@ -49,7 +65,7 @@
     position: relative;
     display: block;
     padding: 30px 90px;
-    margin: 20px;
+    margin: 20px auto;
     line-height: 1.25;
     color: rgb(143, 148, 46);
     background-color: #fff;
@@ -58,7 +74,7 @@
     font-size: 27px;
     border-radius: 20px;
 }
-.grade-item:hover {
+.grade-item:hover   {
     cursor: pointer;
     transition: 0.5s;
     color: white;
