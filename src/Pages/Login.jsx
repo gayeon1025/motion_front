@@ -55,13 +55,23 @@ class LoginContents extends Component{
             })
     }
 
-    successToLogin = (data) => {
-        if (data == true) {
+    successToLogin = async (user) => {
+        if (user != true) {
+            await this.setCookie(user);
             window.location.href = "/home"
         }
         else {
             alert("잘못된 유저 정보입니다")
         }
+    }
+
+    setCookie = (user) => {
+        let expirationDate = new Date();
+        expirationDate.setDate(expirationDate.getDate() + 1); // 하루동안만 로그인정보 유지
+
+        // let cookie_value = '; expires=' + expirationDate.toDateString();
+        document.cookie =  'userId' + '=' + user.userId;
+        document.cookie =  'userRoll' + '=' + user.userRoll;
     }
 
     render() {
