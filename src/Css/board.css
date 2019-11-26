@@ -62,19 +62,19 @@
 }
 
 /*Table Layout*/
-.boardNo {
+.postNo {
     width: 100px;
 }
-.boardTitle {
+.postTitle {
     width: 750px;
 }
-.boardTitle:hover {
+.postTitle:hover {
     cursor: pointer;
     text-decoration: underline;
 }
-.boardAuthor {
+.postAuthor {
     width: 150px;
 }
-.boardDate {
+.postDate {
     width: 200px;
 }
