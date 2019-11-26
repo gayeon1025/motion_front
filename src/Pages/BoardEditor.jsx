@@ -7,15 +7,11 @@ import 'codemirror/lib/codemirror.css';
 import 'tui-editor/dist/tui-editor.min.css';
 import 'tui-editor/dist/tui-editor-contents.min.css';
 import { Editor } from '@toast-ui/react-editor'
-import * as userValidation from './Common/UserValidation'
 import * as boardService from "../Services/board";
 
 class BoardEditor extends Component {
     constructor (props) {
         super(props)
-        this.state = {
-            loggedInUser : userValidation.getUserLoginState(this)
-        }
     }
 
     render() {

@@ -4,24 +4,20 @@ import Footer from "./Common/Footer"
 import '../Css/common.css'
 import '../Css/notice.css'
 import Pagination from "./Common/Pagination";
-import * as userValidation from './Common/UserValidation'
 import * as noticeService from '../Services/notice'
+import * as cookies from "./Common/Cookies";
 
 class Notice extends Component {
     constructor (props) {
         super(props)
-        this.state = {
-            loggedInUser : userValidation.getUserLoginState(this),
-        }
     }
 
     render() {
-        // this.getNotices(this.state.offset, this.state.limit);
         return (
             <div className={"fullWidth"}>
                 <Header/>
                     <NoticeHeader/>
-                    <NoticeContents userRoll={this.state.loggedInUser.userRoll} offset={this.props.match.params.offset} limit={this.props.match.params.limit}/>
+                    <NoticeContents offset={this.props.match.params.offset} limit={this.props.match.params.limit}/>
                 <Footer/>
             </div>
         )
@@ -39,11 +35,19 @@ const NoticeHeader = () => (
 
 class NoticeContents extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            userRoll : null,
+        }
+    }
+
     addNewNotice = () => {
         window.location.href = "/notice/new"
     }
 
     componentDidMount(): void {
+        this.setState({userRoll : cookies.getCookie("userRoll")});
         this.getNotices(this.props.offset, this.props.limit)
     }
 
@@ -74,7 +78,7 @@ class NoticeContents extends Component {
         return (
             <div className={"contents noticeContentsDiv"}>
                 <div className={"noticeContentTitle"}>공지사항</div>
-                <div className={"newNoticeButtonDiv fullWidth"} style={{display : this.props.userRoll == "ADMIN" ? "block" : "none"}}>>
+                <div className={"newNoticeButtonDiv fullWidth"} style={{display : this.state.userRoll == "ADMIN" ? "block" : "none"}}>>
                     <button className={"newNoticeButton notoSansFont"} type={"button"} onClick={ this.addNewNotice }>글쓰기</button>
                 </div>
                 <div className={"noticeTableDiv"}>
