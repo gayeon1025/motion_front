@@ -59,15 +59,24 @@ class ExamContents extends Component {
     }
 }
 
-const GradeSelection = () => (
-    <div className={"gradeSelectionDiv"}>
-        <ul className="grades">
-            <li className="grade-item">1학년</li>
-            <li className="grade-item">2학년</li>
-            <li className="grade-item">3학년</li>
-            <li className="grade-item">4학년</li>
-        </ul>
-    </div>
-)
+class GradeSelection extends Component {
+
+    moveToExamListPageByGrade = (grade) => {
+        document.location.href = "/exam/" + grade;
+    }
+
+    render() {
+        return (
+            <div className={"gradeSelectionDiv"}>
+                <ul className="grades">
+                    <li className="grade-item" onClick={() => {this.moveToExamListPageByGrade(1)}}>1학년</li>
+                    <li className="grade-item" onClick={() => {this.moveToExamListPageByGrade(2)}}>2학년</li>
+                    <li className="grade-item" onClick={() => {this.moveToExamListPageByGrade(3)}}>3학년</li>
+                    <li className="grade-item" onClick={() => {this.moveToExamListPageByGrade(4)}}>4학년</li>
+                </ul>
+            </div>
+        );
+    }
+}
 
 export default Exam
