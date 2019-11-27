@@ -20,7 +20,7 @@ class Header extends Component {
                 console.log(user);
                 if (user.userId == null) {
                     this.setState({loginState : false}, () => {
-                        if (window.location.href != config.FRONT_SERVER_PREFIX + "/login" && window.location.href != config.FRONT_SERVER_PREFIX + "/home") {
+                        if (window.location.href != config.FRONT_SERVER_PREFIX + "/join" && window.location.href != config.FRONT_SERVER_PREFIX + "/login" && window.location.href != config.FRONT_SERVER_PREFIX + "/home") {
                             alert("로그인 후 이용해 주세요")
                             window.location.href = "/login"
                         }
