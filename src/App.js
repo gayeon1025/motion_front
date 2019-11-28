@@ -15,6 +15,9 @@ import axios from 'axios';
 import NoticeEditor from "./Pages/NoticeEditor";
 import BoardEditor from "./Pages/BoardEditor";
 import ExamEditor from "./Pages/ExamEditor";
+import ExamList from "./Pages/ExamList";
+import EquipmentEditor from "./Pages/EquipmentEditor";
+import EducationEditor from "./Pages/EduEditor";
 axios.defaults.withCredentials = true
 
 function App() {
@@ -30,9 +33,12 @@ function App() {
           <Route exact path="/board/new" component={ BoardEditor }/>
           <Route path="/calendar" component={ Schedule }/>
           <Route exact path="/edu/:offset/:limit" component={ Education }/>
+          <Route exact path="/edu/new" component={ EducationEditor }/>
           <Route exact path="/exam" component={ Exam }/>
+          <Route exact path="/exam/:grade/:offset/:limit" component={ ExamList }/>
           <Route exact path="/exam/new" component={ ExamEditor }/>
-          <Route path="/equipment" component={ Equipment }/>
+          <Route exact path="/equipments" component={ Equipment }/>
+          <Route exact path="/equipments/new" component={ EquipmentEditor }/>
           <Route path="/gallery" component={ Gallery }/>
           <Route path="/login" component={ Login }/>
         </Router>

@@ -1,0 +1,18 @@
+.borrowStuffButton {
+    border-radius: 20px;
+    padding: 10px 70px;
+    margin: 30px auto;
+    background-color: rgb(143, 148, 46);
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    width: 250px;
+    margin: 40px 20px;
+}
+.borrowStuffButton:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    color: rgb(143, 148, 46);
+    transition-property: background-color;
+    background-color: white;
+}
