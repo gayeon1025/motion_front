@@ -72,6 +72,7 @@ class LoginContents extends Component{
         // let cookie_value = '; expires=' + expirationDate.toDateString();
         document.cookie =  'userId' + '=' + user.userId;
         document.cookie =  'userRoll' + '=' + user.userRoll;
+        document.cookie =  'userName' + '=' + user.userName;
     }
 
     render() {
