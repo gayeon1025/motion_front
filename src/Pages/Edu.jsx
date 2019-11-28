@@ -95,13 +95,17 @@ class EduContents extends Component {
         document.getElementById('educationTableBody').innerHTML = '<tr> <td colspan=\'5\'>등록된 게시글이 없습니다</td> </tr>';
     }
 
+    addNewEducation = () => {
+        window.location.href = "/edu/new";
+    }
+
     render() {
         return (
             <div className={"contents eduContentsDiv"}>
                 <div className={"eduContentTitle"}>교육</div>
                 <div className={"eduContentComment notoSansFont"}>교육명을 선택하면 상세정보를 확인하실 수 있습니다</div>
                 <div className="newEduButtonDiv fullWidth" style={{ display: (this.state.userRoll != null) && (this.state.userRoll === 'ADMIN' || this.state.userRoll === 'USER') ? 'block' : 'none' }}>
-                    <button className="newEduButton notoSansFont" type="button" onClick={this.addNewPost}>교육 등록</button>
+                    <button className="newEduButton notoSansFont" type="button" onClick={this.addNewEducation}>교육 등록</button>
                 </div>
                 <div className={"eduTableDiv"}>
                     <table className={"table"}>
@@ -133,7 +137,7 @@ class EduContents extends Component {
                                 <th className={"eduNo"}>3</th>
                                 <td className={"eduTitle"}>기초 Java 교육</td>
                                 <td className={"eduAuthor"}>이정준</td>
-                                <td className={"eduState"}>종</td>
+                                <td className={"eduState"}>종료</td>
                                 <td className={"eduDate"}>2019.05.29</td>
                             </tr>
                         </tbody>

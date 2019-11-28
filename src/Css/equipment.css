@@ -50,7 +50,7 @@
     font-size: 20px;
     width: 150px;
     padding: 5px 25px;
-    margin: 10px 30px;
+    margin: 10px 0px;
     font-weight: bold;
 }
 .borrowButton:hover {
@@ -65,18 +65,21 @@
 .equipmentNo {
     width: 100px;
 }
-.equipmentTitle {
+.equipmentName {
     width: 400px;
 }
-.equipmentAuthor {
+.equipmentQuantity {
+    width: 100px;
+}
+.equipmentBorrower {
     width: 150px;
 }
-.equipmentAuthor {
+.equipmentState {
     width: 200px;
 }
-.equipmentDate {
+.equipmentDateStart {
     width: 200px;
 }
-.equipmentDate {
+.equipmentDateEnd {
     width: 200px;
 }

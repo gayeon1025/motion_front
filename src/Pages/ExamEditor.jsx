@@ -166,10 +166,6 @@ class ExamEditorContents extends Component {
                                 </tr>
                             </thead>
                             <tbody id={"fileBody"}>
-                                {/*<tr>*/}
-                                {/*    <td className={"fileName"}>201502136_김가연_공소_과제</td>*/}
-                                {/*    <td className={"fileSize"}>73.5KB</td>*/}
-                                {/*</tr>*/}
                             </tbody>
                         </table>
                     </div>
