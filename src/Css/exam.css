@@ -81,3 +81,46 @@
     transition-property: background-color;
     background-color: rgb(192, 200, 98);
 }
+
+/*Table Layout*/
+.examNo {
+    width: 100px;
+}
+.subject {
+    width: 750px;
+}
+.subject:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.professor {
+    width: 200px;
+}
+.midOrFinal {
+    width: 200px;
+}
+.examRegisterDate {
+    width: 200px;
+}
+
+/*ExamList*/
+.listFilterBox {
+    text-align: left;
+    margin: 10px 0;
+}
+.filterSelector {
+    display: inline-block;
+    height: calc(1.5em + .75rem);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    outline: none;
+    margin: 0 5px;
+}

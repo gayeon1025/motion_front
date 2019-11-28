@@ -62,7 +62,7 @@ class ExamContents extends Component {
 class GradeSelection extends Component {
 
     moveToExamListPageByGrade = (grade) => {
-        document.location.href = "/exam/" + grade;
+        document.location.href = "/exam/" + grade + "/1/15";
     }
 
     render() {

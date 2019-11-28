@@ -39,11 +39,11 @@ class ExamEditorHeader extends Component {
 
 class ExamEditorContents extends Component {
     componentDidMount(): void {
-        this.getSubjects();
+        this.getSubjects(0);
     }
 
-    getSubjects = () => {
-        ExamService.getSubjects()
+    getSubjects = (grade) => {
+        ExamService.getSubjects(0)
             .then(response => {
                 this.appendSubjects(response.data);
             })
