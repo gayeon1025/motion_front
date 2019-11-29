@@ -4,49 +4,29 @@ import '../../Css/common.css'
 import '../../Css/header.css';
 import * as config from "../../Config/config"
 import * as accountService from "../../Services/accounts"
+import * as cookies from './Cookies'
 
 class Header extends Component {
     constructor (props) {
         super(props)
         this.state = {
-            loginState : this.getUserLoginState()
+            userRoll : null,
         }
     }
 
-    getUserLoginState = () => {
-        accountService.getUserLoginState()
-            .then(response => {
-                let user = response.data;
-                console.log(user);
-                if (user.userId == null) {
-                    this.setState({loginState : false}, () => {
-                        if (window.location.href != config.FRONT_SERVER_PREFIX + "/join" && window.location.href != config.FRONT_SERVER_PREFIX + "/login" && window.location.href != config.FRONT_SERVER_PREFIX + "/home") {
-                            alert("로그인 후 이용해 주세요")
-                            window.location.href = "/login"
-                        }
-                    })
-                }
-                else {
-                    this.setState({loginState : true})
-                }
-            })
-            .catch(error => {
-                console.log("Error for getting login state : " + error)
-            })
+    componentDidMount(): void {
+        this.setState({userRoll : cookies.getCookie("userRoll")});
     }
 
     logout = () => {
         let logout = window.confirm("로그아웃 하시겠습니까?")
         if (logout) {
-            accountService.logout()
-                .then(response => {
-                    this.setState({loginState : false})
-                    alert("로그아웃 되었습니다")
-                })
-                .catch(error => {
-                    alert("오류가 발생했습니다.")
-                    window.location.href = "/home"
-                })
+            // Remove cookies
+            cookies.deleteCookie(['userId', 'userName', 'userRoll']);
+            this.setState({userRoll : null}, () => {
+                this.setState({loginState : false})
+                alert("로그아웃 되었습니다");
+            });
         }
         else {
             alert("취소")
@@ -70,7 +50,7 @@ class Header extends Component {
                                 <li className = { "navMenu" }><a className="menuText" href="/equipments">물품대여</a></li>
                                 <li className = { "navMenu" }><a className="menuText" href="/gallery">사진첩</a></li>
                                 <li className = { "navMenu" } >
-                                    { this.state.loginState ? (<a className="menuText" onClick={() => {this.logout()}}>로그아웃</a>) : (<a className="menuText" href="/login">로그인</a>)}
+                                    { this.state.userRoll ? (<a className="menuText" onClick={() => {this.logout()}}>로그아웃</a>) : (<a className="menuText" href="/login">로그인</a>)}
                                 </li>
                             </ul>
                         </div>

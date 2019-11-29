@@ -56,8 +56,9 @@ class LoginContents extends Component{
     }
 
     successToLogin = async (user) => {
-        if (user != true) {
+        if (user.userId != null) {
             await this.setCookie(user);
+
             window.location.href = "/home"
         }
         else {
@@ -69,10 +70,10 @@ class LoginContents extends Component{
         let expirationDate = new Date();
         expirationDate.setDate(expirationDate.getDate() + 1); // 하루동안만 로그인정보 유지
 
-        // let cookie_value = '; expires=' + expirationDate.toDateString();
-        document.cookie =  'userId' + '=' + user.userId;
-        document.cookie =  'userRoll' + '=' + user.userRoll;
-        document.cookie =  'userName' + '=' + user.userName;
+        let expiration_value = '; expires=' + expirationDate.toDateString();
+        document.cookie =  'userId' + '=' + user.userId + expiration_value;
+        document.cookie =  'userRoll' + '=' + user.userRoll + expiration_value;
+        document.cookie =  'userName' + '=' + user.userName + expiration_value;
     }
 
     render() {

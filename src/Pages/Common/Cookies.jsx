@@ -9,3 +9,12 @@ export function getCookie(name) {
         return value;
     }
 }
+
+export function deleteCookie(names) {
+    let past = new Date();
+    past.setDate(past.getDate() - 1);
+
+    for (let i=0; i<names.length; i++) {
+        document.cookie = names[i] + '=' + null + ';expires=' + past.toUTCString();
+    }
+}
