@@ -5,6 +5,7 @@ import '../../Css/header.css';
 import * as config from "../../Config/config"
 import * as accountService from "../../Services/accounts"
 import * as cookies from './Cookies'
+import a from "eslint-plugin-jsx-a11y/src/util/implicitRoles/a";
 
 class Header extends Component {
     constructor (props) {
@@ -15,7 +16,35 @@ class Header extends Component {
     }
 
     componentDidMount(): void {
-        this.setState({userRoll : cookies.getCookie("userRoll")});
+        this.setState({userRoll : cookies.getCookie("userRoll")}, () => { this.appendMenu() });
+    }
+
+    appendMenu = () => {
+        if (this.state.userRoll == null) return;
+
+        const ul = document.getElementsByClassName("nav")[0];
+        let li = null;
+        if (this.state.userRoll == 'ADMIN') {
+            li = this.createNewMenuLiTag("관리자 페이지");
+        }
+        else if (this.state.userRoll == 'USER') {
+            li = this.createNewMenuLiTag("내 페이지");
+        }
+        ul.appendChild(li);
+
+        document.getElementById("menuContainer").style.marginLeft = "20px";
+    }
+
+    createNewMenuLiTag = (menuText) => {
+        const aTag = document.createElement('a');
+        aTag.setAttribute('class', 'menuText');
+        aTag.innerText = menuText;
+
+        const li = document.createElement('li');
+        li.setAttribute('class', 'navMenu');
+        li.appendChild(aTag);
+
+        return li;
     }
 
     logout = () => {
