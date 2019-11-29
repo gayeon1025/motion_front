@@ -12,7 +12,7 @@ const Board = class extends React.PureComponent {
     const { props } = this;
     return (
       <div className="fullWidth">
-        <Header />
+        <Header active={"board"}/>
         <BoardHeader />
         <BoardContents
           offset={props.match.params.offset}

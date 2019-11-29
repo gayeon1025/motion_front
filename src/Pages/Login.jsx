@@ -13,7 +13,7 @@ class Login extends Component{
     render() {
         return (
             <div className={"fullWidth"}>
-                <Header/>
+                <Header active={"login"}/>
                 <LoginHeader/>
                 <LoginContents/>
                 <Footer/>

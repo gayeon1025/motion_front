@@ -16,7 +16,7 @@ class NoticeEditor extends Component {
     render() {
         return (
             <div className={"fullWidth"}>
-                <Header/>
+                <Header active={"notice"}/>
                 <NoticeEditorHeader/>
                 {/*<NoticeContents userRoll={this.state.loggedInUser.userRoll}/>*/}
                 <EditorContents/>

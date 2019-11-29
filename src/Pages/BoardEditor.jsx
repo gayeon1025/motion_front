@@ -17,7 +17,7 @@ class BoardEditor extends Component {
     render() {
         return (
             <div className={"fullWidth"}>
-                <Header/>
+                <Header active={"board"}/>
                 <BoardEditorHeader/>
                 <BoardEditorContents/>
                 <Footer/>

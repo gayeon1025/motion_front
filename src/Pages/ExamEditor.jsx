@@ -15,7 +15,7 @@ class ExamEditor extends Component {
     render() {
         return (
             <div className={"fullWidth"}>
-                <Header/>
+                <Header active={"exam"}/>
                 <ExamEditorHeader/>
                 <ExamEditorContents/>
                 <Footer/>

@@ -11,7 +11,7 @@ class Education extends Component {
     render() {
         return (
             <div className={"fullWidth"}>
-                <Header/>
+                <Header active={"edu"}/>
                     <EduHeader/>
                     <EduContents
                         offset={this.props.match.params.offset}

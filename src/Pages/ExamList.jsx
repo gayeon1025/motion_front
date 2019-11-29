@@ -11,7 +11,7 @@ class ExamList extends Component {
     render() {
         return (
             <div className={"fullWidth"}>
-                <Header/>
+                <Header active={"exam"}/>
                 <ExamListHeader/>
                 <ExamListContents
                     grade={this.props.match.params.grade}

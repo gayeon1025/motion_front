@@ -10,7 +10,7 @@ class Exam extends Component {
     render() {
         return (
             <div className={"fullWidth"}>
-                <Header/>
+                <Header active={"exam"}/>
                     <ExamHeader/>
                     <ExamContents/>
                 <Footer/>

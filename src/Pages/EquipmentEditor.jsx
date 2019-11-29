@@ -11,7 +11,7 @@ class EquipmentEditor extends Component {
     render() {
         return (
             <div className={"fullWidth"}>
-                <Header/>
+                <Header active={"equipment"}/>
                 <EquipmentEditorHeader/>
                 <EquipmentEditorContents/>
                 <Footer/>

@@ -27,16 +27,16 @@ function App() {
         <Router exact path="/" component={App}>
           <Route path="/home" component={ Home }/>
           <Route path="/join" component={ Join }/>
-          <Route exact path="/notice/:offset/:limit" component={ Notice }/>
-          <Route exact path="/notice/new" component={ NoticeEditor }/>
-          <Route exact path="/board/:offset/:limit" component={ Board }/>
-          <Route exact path="/board/new" component={ BoardEditor }/>
+          <Route exact path="/notices/:offset/:limit" component={ Notice }/>
+          <Route exact path="/notices/new" component={ NoticeEditor }/>
+          <Route exact path="/boards/:offset/:limit" component={ Board }/>
+          <Route exact path="/boards/new" component={ BoardEditor }/>
           <Route path="/calendar" component={ Schedule }/>
           <Route exact path="/edu/:offset/:limit" component={ Education }/>
           <Route exact path="/edu/new" component={ EducationEditor }/>
-          <Route exact path="/exam" component={ Exam }/>
-          <Route exact path="/exam/:grade/:offset/:limit" component={ ExamList }/>
-          <Route exact path="/exam/new" component={ ExamEditor }/>
+          <Route exact path="/exams" component={ Exam }/>
+          <Route exact path="/exams/:grade/:offset/:limit" component={ ExamList }/>
+          <Route exact path="/exams/new" component={ ExamEditor }/>
           <Route exact path="/equipments" component={ Equipment }/>
           <Route exact path="/equipments/new" component={ EquipmentEditor }/>
           <Route path="/gallery" component={ Gallery }/>

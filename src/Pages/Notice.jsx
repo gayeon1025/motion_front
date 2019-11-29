@@ -15,7 +15,7 @@ class Notice extends Component {
     render() {
         return (
             <div className={"fullWidth"}>
-                <Header/>
+                <Header active={"notice"}/>
                     <NoticeHeader/>
                     <NoticeContents offset={this.props.match.params.offset} limit={this.props.match.params.limit}/>
                 <Footer/>

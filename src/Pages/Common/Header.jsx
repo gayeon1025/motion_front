@@ -17,6 +17,7 @@ class Header extends Component {
 
     componentDidMount(): void {
         this.setState({userRoll : cookies.getCookie("userRoll")}, () => { this.appendMenu() });
+        this.activeMenu(this.props.active);
     }
 
     appendMenu = () => {
@@ -62,6 +63,24 @@ class Header extends Component {
         }
     }
 
+    // moveToTargetPage = async (event, targetLocation) => {
+    //     this.inactiveMenu();
+    //     await event.target.classList.add("active");
+    //
+    //     window.location.href = targetLocation;
+    // }
+
+    activeMenu = (activeMenu) => {
+        // First, inactive previous active menu highlight
+        let menuATags = document.getElementsByClassName("menuText");
+        for (let i=0; i<menuATags.length; i++) {
+            menuATags[i].classList.remove("active");
+        }
+
+        // Active current menu
+        document.getElementsByClassName(activeMenu)[0].classList.add("active");
+    }
+
     render() {
         return (
             <div>
@@ -70,16 +89,16 @@ class Header extends Component {
                         <LogoContainer/>
                         <div id="menuContainer" className={"horizontal"}>
                             <ul className="nav navbar-nav navbar-right menu-top">
-                                <li className = { "navMenu" }><a className="active menuText" href="/home">Home</a></li>
-                                <li className = { "navMenu" }><a className="menuText" href="/notice/1/15">공지사항 </a></li>
-                                <li className = { "navMenu" }><a className="menuText" href="/board/1/15">게시판</a></li>
-                                <li className = { "navMenu" }><a className="menuText" href="/calendar">일정</a></li>
-                                <li className = { "navMenu" }><a className="menuText" href="/edu/1/15">교육</a></li>
-                                <li className = { "navMenu" }><a className="menuText" href="/exam">기출문제</a></li>
-                                <li className = { "navMenu" }><a className="menuText" href="/equipments">물품대여</a></li>
-                                <li className = { "navMenu" }><a className="menuText" href="/gallery">사진첩</a></li>
+                                <li className = { "navMenu" }><a className="home menuText" href="/home">Home</a></li>
+                                <li className = { "navMenu" }><a className="notice menuText" href="/notices/1/15">공지사항 </a></li>
+                                <li className = { "navMenu" }><a className="board menuText" href="/boards/1/15">게시판</a></li>
+                                <li className = { "navMenu" }><a className="calendar menuText" href="/calendar">일정</a></li>
+                                <li className = { "navMenu" }><a className="edu menuText" href="/edu/1/15">교육</a></li>
+                                <li className = { "navMenu" }><a className="exam menuText" href="/exams">기출문제</a></li>
+                                <li className = { "navMenu" }><a className="equipment menuText" href="/equipments">물품대여</a></li>
+                                <li className = { "navMenu" }><a className="gallery menuText" href="/gallery">사진첩</a></li>
                                 <li className = { "navMenu" } >
-                                    { this.state.userRoll ? (<a className="menuText" onClick={() => {this.logout()}}>로그아웃</a>) : (<a className="menuText" href="/login">로그인</a>)}
+                                    { this.state.userRoll ? (<a className="menuText" onClick={() => {this.logout()}}>로그아웃</a>) : (<a className="login menuText" href="/login">로그인</a>)}
                                 </li>
                             </ul>
                         </div>

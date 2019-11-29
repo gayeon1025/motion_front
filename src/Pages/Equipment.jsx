@@ -9,7 +9,7 @@ class Equipment extends Component {
     render() {
         return (
             <div className={"fullWidth"}>
-                <Header/>
+                <Header active={"equipment"}/>
                     <EquipmentHeader/>
                     <EquipmentContents/>
                 <Footer/>

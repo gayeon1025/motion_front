@@ -13,7 +13,7 @@ class EducationEditor extends Component {
     render() {
         return (
             <div className={"fullWidth"}>
-                <Header/>
+                <Header active={"edu"}/>
                 <EduEditorHeader/>
                 <EduEditorContents/>
                 <Footer/>

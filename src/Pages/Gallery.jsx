@@ -17,7 +17,7 @@ class Gallery extends Component {
     render() {
         return (
             <div className={"fullWidth"}>
-                <Header/>
+                <Header active={"gallery"}/>
                     <GalleryHeader/>
                     <GalleryContents/>
                 <Footer/>

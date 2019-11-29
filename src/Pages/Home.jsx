@@ -19,7 +19,7 @@ class Home extends Component{
     render() {
         return (
             <div className={"fullWidth homeDiv"}>
-                <Header/>
+                <Header active={"home"}/>
                 <Main/>
                 <IntroVideoSection/>
                 <hr/>
