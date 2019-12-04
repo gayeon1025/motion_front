@@ -41,7 +41,7 @@ class ExamContents extends Component {
     }
 
     addNewExam = () => {
-        document.location.href = '/exam/new'
+        document.location.href = '/exams/new'
     }
 
     render() {
@@ -62,7 +62,7 @@ class ExamContents extends Component {
 class GradeSelection extends Component {
 
     moveToExamListPageByGrade = (grade) => {
-        document.location.href = "/exam/" + grade + "/1/15";
+        document.location.href = "/exams/" + grade + "/1/15";
     }
 
     render() {
