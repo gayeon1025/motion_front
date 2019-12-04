@@ -43,16 +43,16 @@ class ExamListContents extends Component {
         this.state = {
             offset : this.props.offset,
             limit  : this.props.limit,
-            subject : null,
-            professor : null,
-            midOrFinal : null,
+            subject : "null",
+            professor : "null",
+            midOrFinal : 0,
         }
     }
 
     componentDidMount(): void {
         console.log("componentDidMount!");
         this.getSubjects();
-        this.getExams(this.props.grade, "", "", 0, this.state.offset, this.state.limit); // empty subject and professor means getting whole subjects.
+        this.getExams(this.props.grade, "null", "null", 0, this.state.offset, this.state.limit); // empty subject and professor means getting whole subjects.
     }
 
     shouldComponentUpdate(nextProps: Readonly<P>, nextState: Readonly<S>, nextContext: any): boolean {
@@ -80,15 +80,16 @@ class ExamListContents extends Component {
     printExams = (exams) => {
         const examTableBody = document.getElementById("examTableBody");
         examTableBody.innerHTML = '';
+        let examIndex = (this.state.offset - 1) * this.state.limit + 1;
         for (let i=0; i<exams.length; i++) {
             let numberTd = document.createElement('td');
             numberTd.setAttribute('class', 'examNo');
-            numberTd.innerText = exams[i].number;
+            numberTd.innerText = examIndex++;
 
             let subjectTd = document.createElement('td');
             subjectTd.setAttribute('class', 'subject');
             subjectTd.innerText = exams[i].name;
-            subjectTd.onclick(this.showExamDetail(exams[i].id));
+            // subjectTd.onclick(this.showExamDetail(exams[i].id));
 
             let professorTd = document.createElement('td');
             professorTd.setAttribute('class', 'professor');
