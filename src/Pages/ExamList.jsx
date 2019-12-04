@@ -56,7 +56,8 @@ class ExamListContents extends Component {
     }
 
     shouldComponentUpdate(nextProps: Readonly<P>, nextState: Readonly<S>, nextContext: any): boolean {
-        this.getExams(this.props.grade, this.state.subject, this.state.professor, this.state.midOrFinal, this.state.offset, this.state.limit);
+        // console.log("shouldComponentUpdate : " + nextState.midOrFinal);
+        this.getExams(this.props.grade, nextState.subject, nextState.professor, nextState.midOrFinal, nextState.offset, nextState.limit);
         return true;
     }
 
