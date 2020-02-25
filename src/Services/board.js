@@ -6,9 +6,9 @@ const api = axios.create({
 });
 
 export function addNewPost(notice) {
-    return axios.post(config.BACK_SERVER_PREFIX + "/board", notice, headerConfig)
+    return axios.post("/board", notice, headerConfig)
 }
 
 export function getPosts(offset, limit) {
-    return axios.get(config.BACK_SERVER_PREFIX + "/board/" + offset + "/" + limit, "", headerConfig)
+    return axios.get("/board/" + offset + "/" + limit, "", headerConfig)
 }

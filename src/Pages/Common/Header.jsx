@@ -52,7 +52,7 @@ class Header extends Component {
         let logout = window.confirm("로그아웃 하시겠습니까?")
         if (logout) {
             // Remove cookies
-            cookies.deleteCookie(['userId', 'userName', 'userRoll']);
+            cookies.deleteCookie(['studentId', 'userName', 'userRoll']);
             this.setState({userRoll : null}, () => {
                 this.setState({loginState : false})
                 alert("로그아웃 되었습니다");

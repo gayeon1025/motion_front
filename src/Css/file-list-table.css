@@ -1,0 +1,28 @@
+/*File - File List*/
+.fileList {
+    width: 1048px;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    color: dimgrey;
+    margin-top: 10px;
+    display: none;
+}
+.fileList > thead{
+    font-size: 14px;
+    text-align: center;
+}
+.fileList > thead > tr > td {
+    border-bottom: 1px solid #ccc;
+    background-color: #fbfbfb;
+}
+.fileName {
+    width: 1000px;
+}
+.fileSize {
+    width: 120px;
+}
+.fileList > tbody {
+    font-size: 13px;
+    text-align: center;
+    color: black;
+}

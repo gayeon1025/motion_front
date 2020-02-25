@@ -55,7 +55,7 @@ class EquipmentEditorContents extends Component {
         }
 
         let rentalRecord = {
-            userId : cookies.getCookie("userId"),
+            userId : cookies.getCookie("studentId"),
             equipmentName : document.getElementById("equipmentName").value,
             quantity : document.getElementById("quantity").value,
             startDate : document.getElementById("startDate").value,

@@ -46,13 +46,13 @@ const MyCalendar = () => (
         calendars={[
             {
                 id: '0',
-                name: 'Private',
+                name: 'Club',
                 bgColor: '#9e5fff',
                 borderColor: '#9e5fff'
             },
             {
                 id: '1',
-                name: 'Company',
+                name: 'Department',
                 bgColor: '#00a9ff',
                 borderColor: '#00a9ff'
             }

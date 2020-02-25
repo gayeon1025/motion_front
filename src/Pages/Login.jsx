@@ -36,14 +36,14 @@ class LoginContents extends Component{
     constructor (props) {
         super(props)
         this.state = {
-            userId  : "",
+            studentId  : "",
             userPwd : ""
         }
     }
 
     login = () => {
         let userInfo = {
-            userId : (document.getElementById("userId").value).trim(),
+            studentId : (document.getElementById("studentId").value).trim(),
             userPwd : (document.getElementById("userPwd").value).trim()
         }
         accountService.login(userInfo)
@@ -71,7 +71,7 @@ class LoginContents extends Component{
         expirationDate.setDate(expirationDate.getDate() + 1); // 하루동안만 로그인정보 유지
 
         let expiration_value = '; expires=' + expirationDate.toDateString();
-        document.cookie =  'userId' + '=' + user.userId + expiration_value;
+        document.cookie =  'studentId' + '=' + user.userId + expiration_value;
         document.cookie =  'userRoll' + '=' + user.userRoll + expiration_value;
         document.cookie =  'userName' + '=' + user.userName + expiration_value;
     }
